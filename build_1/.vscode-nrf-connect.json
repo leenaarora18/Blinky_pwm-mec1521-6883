@@ -1,0 +1,16 @@
+{
+  "board": "mec15xxevb_assy6853/mec1501_hsz",
+  "boardRevision": "",
+  "boardDir": "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853",
+  "shouldBuild": true,
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [],
+  "buildDirectory": "build_1",
+  "kconfigFragments": [],
+  "snippets": [],
+  "dtcOverlays": [
+    "../button/mec15xxevb_assy6853.overlay"
+  ],
+  "extraDtcOverlays": []
+}

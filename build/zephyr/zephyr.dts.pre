@@ -1,0 +1,2322 @@
+# 0 "/home/jayesh/zephyrproject/zephyr/misc/empty_file.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853/mec15xxevb_assy6853.dts" 1
+
+
+
+
+
+
+/dts-v1/;
+
+# 1 "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853/mec15xxevb_assy6853-pinctrl.dtsi" 1
+
+
+
+
+
+
+/dts-v1/;
+
+# 1 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 1 3 4
+
+
+
+
+
+
+# 1 "/home/jayesh/zephyrproject/zephyr/dts/arm/armv7-m.dtsi" 1 3 4
+
+
+# 1 "/home/jayesh/zephyrproject/zephyr/dts/common/skeleton.dtsi" 1 3 4
+# 9 "/home/jayesh/zephyrproject/zephyr/dts/common/skeleton.dtsi" 3 4
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+};
+# 4 "/home/jayesh/zephyrproject/zephyr/dts/arm/armv7-m.dtsi" 2 3 4
+
+/ {
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  interrupt-parent = <&nvic>;
+  ranges;
+
+  nvic: interrupt-controller@e000e100 {
+   #address-cells = <1>;
+   compatible = "arm,v7m-nvic";
+   reg = <0xe000e100 0xc00>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+  };
+
+  systick: timer@e000e010 {
+   compatible = "arm,armv7m-systick";
+   reg = <0xe000e010 0x10>;
+  };
+ };
+};
+# 8 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 2 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h" 1 3 4
+# 9 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
+# 19 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 1 3 4
+# 34 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
+# 18 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
+# 1083 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_listify.h" 1 3 4
+# 1084 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_loops.h" 2 3 4
+# 19 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 162 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3 4
+# 163 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 193 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3 4
+# 194 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3 4
+# 197 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+
+
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3 4
+# 200 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 35 "/home/jayesh/zephyrproject/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
+# 20 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
+# 10 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h" 2 3 4
+# 9 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 2 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/mchp_xec_pcr.h" 1 3 4
+# 10 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 2 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h" 1 3 4
+# 11 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 2 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3 4
+# 12 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 2 3 4
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/microchip-xec-gpio.h" 1 3 4
+# 13 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec1501hsz.dtsi" 2 3 4
+
+/ {
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu0: cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-m4";
+   reg = <0>;
+   cpu-power-states = <&idle &suspend_to_ram>;
+  };
+
+  power-states {
+   idle: idle {
+    compatible = "zephyr,power-state";
+    power-state-name = "suspend-to-idle";
+    min-residency-us = <1000000>;
+   };
+
+   suspend_to_ram: suspend_to_ram {
+    compatible = "zephyr,power-state";
+    power-state-name = "suspend-to-ram";
+    min-residency-us = <2000000>;
+   };
+  };
+ };
+
+ flash0: flash@e0000 {
+  reg = <0x000E0000 0x38000>;
+ };
+
+ sram0: memory@118000 {
+  compatible = "mmio-sram";
+  reg = <0x00118000 0x8000>;
+ };
+
+ aliases {
+  i2c-smb-0 = &i2c_smb_0;
+  i2c-smb-1 = &i2c_smb_1;
+  i2c-smb-2 = &i2c_smb_2;
+  i2c-smb-3 = &i2c_smb_3;
+  i2c-smb-4 = &i2c_smb_4;
+ };
+
+ soc {
+  ecs: ecs@4000fc00 {
+   compatible = "microchip,xec-ecs";
+   reg = <0x4000fc00 0x200>;
+  };
+  pcr: pcr@40080100 {
+   compatible = "microchip,xec-pcr";
+   reg = <0x40080100 0x100 0x4000a400 0x100>;
+   reg-names = "pcrr", "vbatr";
+   core-clock-div = <1>;
+
+   pll-32k-src = <0U>;
+   periph-32k-src = <0U>;
+   clk32kmon-period-min = <1435>;
+   clk32kmon-period-max = <1495>;
+   clk32kmon-duty-cycle-var-max = <132>;
+   clk32kmon-valid-min = <4>;
+   xtal-enable-delay-ms = <300>;
+   pll-lock-timeout-ms = <30>;
+   #clock-cells = <3>;
+  };
+  ecia: ecia@4000e000 {
+   reg = <0x4000e000 0x400>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   girq23: girq23@12c {
+    reg = <0x12c 0x14>;
+    interrupts = <14 0>;
+    girq-id = <15>;
+    sources = <0 1 2 4 5 10 16 17>;
+    status = "disabled";
+   };
+  };
+  pinctrl: pin-controller@40081000 {
+   compatible = "microchip,xec-pinctrl";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   reg = <0x40081000 0x1000>;
+
+   gpio_000_036: gpio@40081000 {
+    compatible = "microchip,xec-gpio";
+    reg = < 0x40081000 0x80 0x40081300 0x04
+     0x40081380 0x04 0x400813fc 0x04>;
+    interrupts = <3 2>;
+    gpio-controller;
+    port-id = <0>;
+    girq-id = <11>;
+    #gpio-cells=<2>;
+   };
+   gpio_040_076: gpio@40081080 {
+    compatible = "microchip,xec-gpio";
+    reg = < 0x40081080 0x80 0x40081304 0x04
+     0x40081384 0x04 0x400813f8 0x4>;
+    interrupts = <2 2>;
+    gpio-controller;
+    port-id = <1>;
+    girq-id = <10>;
+    #gpio-cells=<2>;
+   };
+   gpio_100_136: gpio@40081100 {
+    compatible = "microchip,xec-gpio";
+    reg = < 0x40081100 0x80 0x40081308 0x04
+     0x40081388 0x04 0x400813f4 0x04>;
+    gpio-controller;
+    interrupts = <1 2>;
+    port-id = <2>;
+    girq-id = <9>;
+    #gpio-cells=<2>;
+   };
+   gpio_140_176: gpio@40081180 {
+    compatible = "microchip,xec-gpio";
+    reg = < 0x40081180 0x80 0x4008130c 0x04
+     0x4008138c 0x04 0x400813f0 0x04>;
+    gpio-controller;
+    interrupts = <0 2>;
+    port-id = <3>;
+    girq-id = <8>;
+    #gpio-cells=<2>;
+   };
+   gpio_200_236: gpio@40081200 {
+    compatible = "microchip,xec-gpio";
+    reg = < 0x40081200 0x80 0x40081310 0x04
+     0x40081390 0x04 0x400813ec 0x04>;
+    gpio-controller;
+    interrupts = <4 2>;
+    port-id = <4>;
+    girq-id = <12>;
+    #gpio-cells=<2>;
+   };
+   gpio_240_276: gpio@40081280 {
+    compatible = "microchip,xec-gpio";
+    reg = < 0x40081280 0x80 0x40081314 0x04
+     0x40081394 0x04 0x400813e8 0x04>;
+    gpio-controller;
+    interrupts = <17 2>;
+    port-id = <5>;
+    girq-id = <26>;
+    #gpio-cells=<2>;
+   };
+  };
+  rtimer: timer@40007400 {
+   compatible = "microchip,xec-rtos-timer";
+   reg = <0x40007400 0x10>;
+   interrupts = <111 0>;
+   girqs = <23 10>;
+  };
+  bbram: bb-ram@4000a800 {
+   compatible = "microchip,xec-bbram";
+   reg = <0x4000a800 0x80>;
+   reg-names = "memory";
+  };
+  wdog: watchdog@40000400 {
+   compatible = "microchip,xec-watchdog";
+   reg = <0x40000400 0x400>;
+   interrupts = <171 0>;
+   girqs = <21 2>;
+   pcrs = <1 9>;
+  };
+  uart0: uart@400f2400 {
+   compatible = "microchip,xec-uart";
+   reg = <0x400f2400 0x400>;
+   interrupts = <40 0>;
+   clock-frequency = <1843200>;
+   current-speed = <38400>;
+   girqs = <15 0>;
+   pcrs = <2 1>;
+   ldn = <9>;
+   status = "disabled";
+  };
+  uart1: uart@400f2800 {
+   compatible = "microchip,xec-uart";
+   reg = <0x400f2800 0x400>;
+   interrupts = <41 0>;
+   clock-frequency = <1843200>;
+   current-speed = <38400>;
+   girqs = <15 1>;
+   pcrs = <2 2>;
+   ldn = <10>;
+   status = "disabled";
+  };
+  uart2: uart@400f2c00 {
+   compatible = "microchip,xec-uart";
+   reg = <0x400f2c00 0x400>;
+   interrupts = <44 0>;
+   clock-frequency = <1843200>;
+   current-speed = <38400>;
+   girqs = <15 4>;
+   pcrs = <2 28>;
+   ldn = <11>;
+   status = "disabled";
+  };
+
+  i2c_smb_0: i2c@40004000 {
+   compatible = "microchip,xec-i2c";
+   reg = <0x40004000 0x80>;
+   clock-frequency = <100000>;
+   interrupts = <20 1>;
+   pcrs = <1 10>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+   girq = <13>;
+   girq-bit = <0>;
+  };
+
+  i2c_smb_1: i2c@40004400 {
+   compatible = "microchip,xec-i2c";
+   reg = <0x40004400 0x80>;
+   clock-frequency = <100000>;
+   interrupts = <21 1>;
+   pcrs = <3 13>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+   girq = <13>;
+   girq-bit = <1>;
+  };
+
+  i2c_smb_2: i2c@40004800 {
+   compatible = "microchip,xec-i2c";
+   reg = <0x40004800 0x80>;
+   clock-frequency = <100000>;
+   interrupts = <22 1>;
+   pcrs = <3 14>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+   girq = <13>;
+   girq-bit = <2>;
+  };
+
+  i2c_smb_3: i2c@40004c00 {
+   compatible = "microchip,xec-i2c";
+   reg = <0x40004C00 0x80>;
+   clock-frequency = <100000>;
+   interrupts = <23 1>;
+   pcrs = <3 15>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+   girq = <13>;
+   girq-bit = <3>;
+  };
+
+  i2c_smb_4: i2c@40005000 {
+   compatible = "microchip,xec-i2c";
+   reg = <0x40005000 0x80>;
+   clock-frequency = <100000>;
+   interrupts = <158 1>;
+   pcrs = <3 20>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+   girq = <13>;
+   girq-bit = <4>;
+  };
+
+  espi0: espi@400f3400 {
+   compatible = "microchip,xec-espi";
+   reg = <0x400f3400 0x400>;
+   interrupts = <11 3>, <15 3>, <7 3>, <16 3>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+  espi_saf0: espi@40008000 {
+   compatible = "microchip,xec-espi-saf";
+   reg = < 0x40008000 0x400
+    0x40070000 0x400
+    0x40071000 0x400>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  timer0: timer@40000c00 {
+   compatible = "microchip,xec-timer";
+   clock-frequency = <48000000>;
+   reg = <0x40000c00 0x20>;
+   interrupts = <136 0>;
+   max-value = <0xFFFF>;
+   prescaler = <0>;
+   status = "disabled";
+   girqs = <23 0>;
+   pcrs = <1 30>;
+  };
+  timer1: timer@40000c20 {
+   compatible = "microchip,xec-timer";
+   clock-frequency = <48000000>;
+   reg = <0x40000c20 0x20>;
+   interrupts = <137 0>;
+   max-value = <0xFFFF>;
+   prescaler = <0>;
+   status = "disabled";
+   girqs = <23 1>;
+   pcrs = <1 31>;
+  };
+
+
+
+
+
+
+  timer4: timer@40000c80 {
+   compatible = "microchip,xec-timer";
+   clock-frequency = <48000000>;
+   reg = <0x40000c80 0x20>;
+   interrupts = <140 0>;
+   max-value = <0xFFFFFFFF>;
+   prescaler = <0>;
+   girqs = <23 4>;
+   pcrs = <3 23>;
+   status = "disabled";
+  };
+  timer5: timer@40000ca0 {
+   compatible = "microchip,xec-timer";
+   clock-frequency = <48000000>;
+   reg = <0x40000ca0 0x20>;
+   interrupts = <141 0>;
+   max-value = <0xFFFFFFFF>;
+   prescaler = <0>;
+   girqs = <23 5>;
+   pcrs = <3 24>;
+  };
+  hibtimer0: timer@40009800 {
+   reg = <0x40009800 0x20>;
+   interrupts = <112 0>;
+   girqs = <23 16>;
+  };
+  hibtimer1: timer@40009820 {
+   reg = <0x40009820 0x20>;
+   interrupts = <113 0>;
+   girqs = <23 17>;
+  };
+  ps2_0: ps2@40009000 {
+   compatible = "microchip,xec-ps2";
+   reg = <0x40009000 0x40>;
+   interrupts = <100 1>;
+   girqs = <18 10>, <21 18>;
+   pcrs = <3 5>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+  ps2_1: ps2@40009040 {
+   compatible = "microchip,xec-ps2";
+   reg = <0x40009040 0x40>;
+   interrupts = <101 1>;
+   girqs = <18 11>, <21 21>;
+   pcrs = <3 6>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+  pwm0: pwm@40005800 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005800 0x20>;
+   pcrs = <1 4>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm1: pwm@40005810 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005810 0x20>;
+   pcrs = <1 20>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm2: pwm@40005820 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005820 0x20>;
+   pcrs = <1 21>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm3: pwm@40005830 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005830 0x20>;
+   pcrs = <1 22>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm4: pwm@40005840 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005840 0x20>;
+   pcrs = <1 23>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm5: pwm@40005850 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005850 0x20>;
+   pcrs = <1 24>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm6: pwm@40005860 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005860 0x20>;
+   pcrs = <1 25>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm7: pwm@40005870 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005870 0x20>;
+   pcrs = <1 26>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  pwm8: pwm@40005880 {
+   compatible = "microchip,xec-pwm";
+   reg = <0x40005880 0x20>;
+   pcrs = <1 27>;
+   status = "disabled";
+   #pwm-cells = <3>;
+  };
+  adc0: adc@40007c00 {
+   compatible = "microchip,xec-adc";
+   reg = <0x40007c00 0x90>;
+   interrupts = <78 0>, <79 0>;
+   girqs = <17 8>, <17 9>;
+   pcrs = <3 3>;
+   status = "disabled";
+   #io-channel-cells = <1>;
+   clktime = <32>;
+  };
+  kbd0: kbd@40009c00 {
+   compatible = "microchip,xec-kbd";
+   reg = <0x40009c00 0x18>;
+   interrupts = <135 0>;
+   girqs = <21 25>;
+   pcrs = <3 11>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+  peci0: peci@40006400 {
+   compatible = "microchip,xec-peci";
+   reg = <0x40006400 0x80>;
+   interrupts = <70 4>;
+   girqs = <17 0>;
+   pcrs = <1 1>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+  spi0: spi@40070000 {
+   compatible = "microchip,xec-qmspi";
+   reg = <0x40070000 0x400>;
+   interrupts = <91 2>;
+   clock-frequency = <12000000>;
+   rxdma = <11>;
+   txdma = <10>;
+   lines = <1>;
+   chip_select = <0>;
+   dcsckon = <6>;
+   dckcsoff = <4>;
+   dldh = <6>;
+   dcsda = <6>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+  tach0: tach@40006000 {
+   compatible = "microchip,xec-tach";
+   reg = <0x40006000 0x10>;
+   interrupts = <71 4>;
+   girqs = <17 1>;
+   pcrs = <1 2>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+  tach1: tach@40006010 {
+   compatible = "microchip,xec-tach";
+   reg = <0x40006010 0x10>;
+   interrupts = <72 4>;
+   girqs = <17 2>;
+   pcrs = <1 11>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+  tach2: tach@40006020 {
+   compatible = "microchip,xec-tach";
+   reg = <0x40006020 0x10>;
+   interrupts = <73 4>;
+   girqs = <17 3>;
+   pcrs = <1 12>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+  tach3: tach@40006030 {
+   compatible = "microchip,xec-tach";
+   reg = <0x40006030 0x10>;
+   interrupts = <159 4>;
+   girqs = <17 4>;
+   pcrs = <1 13>;
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+  bbled0: bbled@4000b800 {
+   reg = <0x4000b800 0x100>;
+   interrupts = <83 0>;
+   girqs = <17 13>;
+   pcrs = <3 16>;
+   status = "disabled";
+  };
+  bbled1: bbled@4000b900 {
+   reg = <0x4000b900 0x100>;
+   interrupts = <84 0>;
+   girqs = <17 14>;
+   pcrs = <3 17>;
+   status = "disabled";
+  };
+  bbled2: bbled@4000ba00 {
+   reg = <0x4000ba00 0x100>;
+   interrupts = <85 0>;
+   girqs = <17 15>;
+   pcrs = <3 18>;
+   status = "disabled";
+  };
+ };
+};
+
+&nvic {
+ arm,num-irq-priority-bits = <3>;
+};
+
+&systick {
+ status = "disabled";
+};
+# 10 "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853/mec15xxevb_assy6853-pinctrl.dtsi" 2
+# 1 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec152x/mec152xhsz-pinctrl.dtsi" 1 3 4
+
+
+
+
+
+
+# 1 "/home/jayesh/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/mchp-xec-pinctrl.h" 1 3 4
+# 8 "/home/jayesh/zephyrproject/zephyr/dts/arm/microchip/mec152x/mec152xhsz-pinctrl.dtsi" 2 3 4
+
+&pinctrl {
+
+ /omit-if-no-ref/ adc00_gpio200: adc00_gpio200 {
+  pinmux = < (((((0200) >> 5) & 0xf) << 0) | (((0200) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc01_gpio201: adc01_gpio201 {
+  pinmux = < (((((0201) >> 5) & 0xf) << 0) | (((0201) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc02_gpio202: adc02_gpio202 {
+  pinmux = < (((((0202) >> 5) & 0xf) << 0) | (((0202) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc03_gpio203: adc03_gpio203 {
+  pinmux = < (((((0203) >> 5) & 0xf) << 0) | (((0203) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc04_gpio204: adc04_gpio204 {
+  pinmux = < (((((0204) >> 5) & 0xf) << 0) | (((0204) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc05_gpio205: adc05_gpio205 {
+  pinmux = < (((((0205) >> 5) & 0xf) << 0) | (((0205) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc06_gpio206: adc06_gpio206 {
+  pinmux = < (((((0206) >> 5) & 0xf) << 0) | (((0206) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ adc07_gpio207: adc07_gpio207 {
+  pinmux = < (((((0207) >> 5) & 0xf) << 0) | (((0207) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vref2_adc_gpio067: vref2_adc_gpio067 {
+  pinmux = < (((((067) >> 5) & 0xf) << 0) | (((067) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ espi_reset_n_gpio061: espi_reset_n_gpio061 {
+  pinmux = < (((((061) >> 5) & 0xf) << 0) | (((061) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_alert_n_gpio063: espi_alert_n_gpio063 {
+  pinmux = < (((((063) >> 5) & 0xf) << 0) | (((063) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_clk_gpio065: espi_clk_gpio065 {
+  pinmux = < (((((065) >> 5) & 0xf) << 0) | (((065) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_cs_n_gpio066: espi_cs_n_gpio066 {
+  pinmux = < (((((066) >> 5) & 0xf) << 0) | (((066) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_io0_gpio070: espi_io0_gpio070 {
+  pinmux = < (((((070) >> 5) & 0xf) << 0) | (((070) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_io1_gpio071: espi_io1_gpio071 {
+  pinmux = < (((((071) >> 5) & 0xf) << 0) | (((071) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_io2_gpio072: espi_io2_gpio072 {
+  pinmux = < (((((072) >> 5) & 0xf) << 0) | (((072) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ espi_io3_gpio073: espi_io3_gpio073 {
+  pinmux = < (((((073) >> 5) & 0xf) << 0) | (((073) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ gptp_in0_gpio224: gptp_in0_gpio224 {
+  pinmux = < (((((0224) >> 5) & 0xf) << 0) | (((0224) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gptp_in1_gpio016: gptp_in1_gpio016 {
+  pinmux = < (((((016) >> 5) & 0xf) << 0) | (((016) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gptp_in2_gpio014: gptp_in2_gpio014 {
+  pinmux = < (((((014) >> 5) & 0xf) << 0) | (((014) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gptp_out0_gpio032: gptp_out0_gpio032 {
+  pinmux = < (((((032) >> 5) & 0xf) << 0) | (((032) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gptp_out1_gpio031: gptp_out1_gpio031 {
+  pinmux = < (((((031) >> 5) & 0xf) << 0) | (((031) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gptp_out2_gpio040: gptp_out2_gpio040 {
+  pinmux = < (((((040) >> 5) & 0xf) << 0) | (((040) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ nec_sci_gpio114: nec_sci_gpio114 {
+  pinmux = < (((((0114) >> 5) & 0xf) << 0) | (((0114) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ nec_sci_alt_gpio061: nec_sci_alt_gpio061 {
+  pinmux = < (((((061) >> 5) & 0xf) << 0) | (((061) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ nec_sci_alt2_gpio100: nec_sci_alt_gpio100 {
+  pinmux = < (((((0100) >> 5) & 0xf) << 0) | (((0100) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ nemi_int_gpio025: nemi_int_gpio025 {
+  pinmux = < (((((025) >> 5) & 0xf) << 0) | (((025) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ nemi_int_alt_gpio244: nemi_int_alt_gpio244 {
+  pinmux = < (((((0224) >> 5) & 0xf) << 0) | (((0224) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ nsmi_gpio107: nsmi_gpio107 {
+  pinmux = < (((((0107) >> 5) & 0xf) << 0) | (((0107) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ nsmi_alt_gpio011: nsmi_alt_gpio011 {
+  pinmux = < (((((011) >> 5) & 0xf) << 0) | (((011) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ i2c00_scl_gpio004: i2c00_scl_gpio004 {
+  pinmux = < (((((04) >> 5) & 0xf) << 0) | (((04) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c00_sda_gpio003: i2c00_sda_gpio003 {
+  pinmux = < (((((03) >> 5) & 0xf) << 0) | (((03) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c01_scl_gpio131: i2c01_scl_gpio131 {
+  pinmux = < (((((0131) >> 5) & 0xf) << 0) | (((0131) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c01_sda_gpio130: i2c01_sda_gpio130 {
+  pinmux = < (((((0130) >> 5) & 0xf) << 0) | (((0130) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c01_scl_alt_gpio073: i2c01_scl_alt_gpio073 {
+  pinmux = < (((((073) >> 5) & 0xf) << 0) | (((073) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c01_sda_alt_gpio072: i2c01_sda_alt_gpio072 {
+  pinmux = < (((((072) >> 5) & 0xf) << 0) | (((072) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c02_scl_gpio155: i2c02_scl_gpio155 {
+  pinmux = < (((((0155) >> 5) & 0xf) << 0) | (((0155) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c02_sda_gpio154: i2c02_sda_gpio154 {
+  pinmux = < (((((0154) >> 5) & 0xf) << 0) | (((0154) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c03_scl_gpio010: i2c03_scl_gpio010 {
+  pinmux = < (((((010) >> 5) & 0xf) << 0) | (((010) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c03_sda_gpio007: i2c03_sda_gpio007 {
+  pinmux = < (((((07) >> 5) & 0xf) << 0) | (((07) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c04_scl_gpio144: i2c04_scl_gpio144 {
+  pinmux = < (((((0144) >> 5) & 0xf) << 0) | (((0144) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c04_sda_gpio143: i2c04_sda_gpio143 {
+  pinmux = < (((((0143) >> 5) & 0xf) << 0) | (((0143) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c05_scl_gpio142: i2c05_scl_gpio142 {
+  pinmux = < (((((0142) >> 5) & 0xf) << 0) | (((0142) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c05_sda_gpio141: i2c05_sda_gpio141 {
+  pinmux = < (((((0141) >> 5) & 0xf) << 0) | (((0141) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c06_scl_gpio140: i2c06_scl_gpio140 {
+  pinmux = < (((((0140) >> 5) & 0xf) << 0) | (((0140) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c06_sda_gpio132: i2c06_sda_gpio132 {
+  pinmux = < (((((0132) >> 5) & 0xf) << 0) | (((0132) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c07_scl_gpio013: i2c07_scl_gpio013 {
+  pinmux = < (((((013) >> 5) & 0xf) << 0) | (((013) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c07_sda_gpio012: i2c07_sda_gpio012 {
+  pinmux = < (((((012) >> 5) & 0xf) << 0) | (((012) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c07_scl_alt_gpio024: i2c07_scl_alt_gpio024 {
+  pinmux = < (((((024) >> 5) & 0xf) << 0) | (((024) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c07_sda_alt_gpio152: i2c07_sda_alt_gpio152 {
+  pinmux = < (((((0152) >> 5) & 0xf) << 0) | (((0152) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c09_scl_gpio146: i2c09_scl_gpio146 {
+  pinmux = < (((((0146) >> 5) & 0xf) << 0) | (((0146) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c09_sda_gpio145: i2c09_sda_gpio145 {
+  pinmux = < (((((0145) >> 5) & 0xf) << 0) | (((0145) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c10_scl_gpio107: i2c10_scl_gpio107 {
+  pinmux = < (((((0107) >> 5) & 0xf) << 0) | (((0107) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c10_sda_gpio030: i2c10_sda_gpio030 {
+  pinmux = < (((((030) >> 5) & 0xf) << 0) | (((030) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c11_scl_gpio062: i2c11_scl_gpio062 {
+  pinmux = < (((((062) >> 5) & 0xf) << 0) | (((062) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c11_sda_gpio000: i2c11_sda_gpio000 {
+  pinmux = < (((((00) >> 5) & 0xf) << 0) | (((00) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c12_scl_gpio027: i2c12_scl_gpio027 {
+  pinmux = < (((((027) >> 5) & 0xf) << 0) | (((027) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c12_sda_gpio026: i2c12_sda_gpio026 {
+  pinmux = < (((((026) >> 5) & 0xf) << 0) | (((026) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c13_scl_gpio065: i2c13_scl_gpio065 {
+  pinmux = < (((((065) >> 5) & 0xf) << 0) | (((065) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c13_sda_gpio066: i2c13_sda_gpio066 {
+  pinmux = < (((((066) >> 5) & 0xf) << 0) | (((066) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c14_scl_gpio071: i2c14_scl_gpio071 {
+  pinmux = < (((((071) >> 5) & 0xf) << 0) | (((071) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c14_sda_gpio070: i2c14_sda_gpio070 {
+  pinmux = < (((((070) >> 5) & 0xf) << 0) | (((070) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c15_scl_gpio150: i2c15_scl_gpio150 {
+  pinmux = < (((((0150) >> 5) & 0xf) << 0) | (((0150) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ i2c15_sda_gpio147: i2c15_sda_gpio147 {
+  pinmux = < (((((0147) >> 5) & 0xf) << 0) | (((0147) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ ict0_tach0_gpio050: ict0_tach0_gpio050 {
+  pinmux = < (((((050) >> 5) & 0xf) << 0) | (((050) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict1_tach1_gpio051: ict1_tach1_gpio051 {
+  pinmux = < (((((051) >> 5) & 0xf) << 0) | (((051) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict2_tach2_gpio052: ict2_tach2_gpio052 {
+  pinmux = < (((((052) >> 5) & 0xf) << 0) | (((052) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict3_gpio016: ict3_gpio016 {
+  pinmux = < (((((016) >> 5) & 0xf) << 0) | (((016) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict4_gpio151: ict4_gpio151 {
+  pinmux = < (((((0151) >> 5) & 0xf) << 0) | (((0151) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict5_gpio140: ict5_gpio140 {
+  pinmux = < (((((0140) >> 5) & 0xf) << 0) | (((0140) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict5_alt_gpio065: ict5_alt_gpio065 {
+  pinmux = < (((((065) >> 5) & 0xf) << 0) | (((065) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict6_gpio100: ict6_gpio100 {
+  pinmux = < (((((0100) >> 5) & 0xf) << 0) | (((0100) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict7_gpio011: ict7_gpio011 {
+  pinmux = < (((((011) >> 5) & 0xf) << 0) | (((011) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict8_gpio063: ict8_gpio063 {
+  pinmux = < (((((063) >> 5) & 0xf) << 0) | (((063) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict9_gpio113: ict9_gpio113 {
+  pinmux = < (((((0113) >> 5) & 0xf) << 0) | (((0113) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict10_gpio015: ict10_gpio015 {
+  pinmux = < (((((015) >> 5) & 0xf) << 0) | (((015) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict11_gpio046: ict11_gpio046 {
+  pinmux = < (((((046) >> 5) & 0xf) << 0) | (((046) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict12_gpio124: ict12_gpio124 {
+  pinmux = < (((((0124) >> 5) & 0xf) << 0) | (((0124) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict13_gpio047: ict13_gpio047 {
+  pinmux = < (((((047) >> 5) & 0xf) << 0) | (((047) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict14_gpio045: ict14_gpio045 {
+  pinmux = < (((((045) >> 5) & 0xf) << 0) | (((045) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ict15_gpio035: ict15_gpio035 {
+  pinmux = < (((((035) >> 5) & 0xf) << 0) | (((035) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ctout0_gpio165: ctout0_gpio165 {
+  pinmux = < (((((0165) >> 5) & 0xf) << 0) | (((0165) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ctout1_gpio035: ctout1_gpio035 {
+  pinmux = < (((((035) >> 5) & 0xf) << 0) | (((035) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ctout1_alt_gpio246: ctout1_alt_gpio246 {
+  pinmux = < (((((0246) >> 5) & 0xf) << 0) | (((0246) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ a20m_gpio127: a20m_gpio127 {
+  pinmux = < (((((0127) >> 5) & 0xf) << 0) | (((0127) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kbrst_gpio060: kbrst_gpio060 {
+  pinmux = < (((((060) >> 5) & 0xf) << 0) | (((060) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ ksi0_gpio017: ksi0_gpio017 {
+  pinmux = < (((((017) >> 5) & 0xf) << 0) | (((017) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi1_gpio020: ksi1_gpio020 {
+  pinmux = < (((((020) >> 5) & 0xf) << 0) | (((020) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi2_gpio021: ksi2_gpio021 {
+  pinmux = < (((((021) >> 5) & 0xf) << 0) | (((021) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi3_gpio026: ksi3_gpio026 {
+  pinmux = < (((((026) >> 5) & 0xf) << 0) | (((026) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi4_gpio027: ksi4_gpio027 {
+  pinmux = < (((((027) >> 5) & 0xf) << 0) | (((027) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi5_gpio030: ksi5_gpio030 {
+  pinmux = < (((((030) >> 5) & 0xf) << 0) | (((030) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi6_gpio031: ksi6_gpio031 {
+  pinmux = < (((((031) >> 5) & 0xf) << 0) | (((031) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ksi7_gpio032: ksi7_gpio032 {
+  pinmux = < (((((032) >> 5) & 0xf) << 0) | (((032) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso00_gpio040: kso00_gpio040 {
+  pinmux = < (((((040) >> 5) & 0xf) << 0) | (((040) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso01_gpio045: kso01_gpio045 {
+  pinmux = < (((((045) >> 5) & 0xf) << 0) | (((045) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso02_gpio046: kso02_gpio046 {
+  pinmux = < (((((046) >> 5) & 0xf) << 0) | (((046) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso03_gpio047: kso03_gpio047 {
+  pinmux = < (((((047) >> 5) & 0xf) << 0) | (((047) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso04_gpio107: kso04_gpio107 {
+  pinmux = < (((((0107) >> 5) & 0xf) << 0) | (((0107) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso05_gpio112: kso05_gpio112 {
+  pinmux = < (((((0112) >> 5) & 0xf) << 0) | (((0112) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso06_gpio113: kso06_gpio113 {
+  pinmux = < (((((0113) >> 5) & 0xf) << 0) | (((0113) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso07_gpio120: kso07_gpio120 {
+  pinmux = < (((((0120) >> 5) & 0xf) << 0) | (((0120) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso08_gpio121: kso08_gpio121 {
+  pinmux = < (((((0121) >> 5) & 0xf) << 0) | (((0121) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso09_gpio122: kso09_gpio122 {
+  pinmux = < (((((0122) >> 5) & 0xf) << 0) | (((0122) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso10_gpio123: kso10_gpio123 {
+  pinmux = < (((((0123) >> 5) & 0xf) << 0) | (((0123) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso11_gpio124: kso11_gpio124 {
+  pinmux = < (((((0124) >> 5) & 0xf) << 0) | (((0124) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso12_gpio125: kso12_gpio125 {
+  pinmux = < (((((0125) >> 5) & 0xf) << 0) | (((0125) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso13_gpio126: kso13_gpio126 {
+  pinmux = < (((((0126) >> 5) & 0xf) << 0) | (((0126) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso14_gpio152: kso14_gpio152 {
+  pinmux = < (((((0152) >> 5) & 0xf) << 0) | (((0152) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso15_gpio151: kso15_gpio151 {
+  pinmux = < (((((0151) >> 5) & 0xf) << 0) | (((0151) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso16_gpio132: kso16_gpio132 {
+  pinmux = < (((((0132) >> 5) & 0xf) << 0) | (((0132) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ kso17_gpio140: kso17_gpio140 {
+  pinmux = < (((((0140) >> 5) & 0xf) << 0) | (((0140) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ led0_gpio156: led0_gpio156 {
+  pinmux = < (((((0156) >> 5) & 0xf) << 0) | (((0156) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ led1_gpio157: led1_gpio157 {
+  pinmux = < (((((0157) >> 5) & 0xf) << 0) | (((0157) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ led2_gpio153: led2_gpio153 {
+  pinmux = < (((((0153) >> 5) & 0xf) << 0) | (((0153) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ shd_cs0_n_gpio055: shd_cs0_n_gpio055 {
+  pinmux = < (((((055) >> 5) & 0xf) << 0) | (((055) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ shd_cs1_n_gpio002: shd_cs1_n_gpio002 {
+  pinmux = < (((((02) >> 5) & 0xf) << 0) | (((02) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ shd_clk_gpio056: shd_clk_gpio056 {
+  pinmux = < (((((056) >> 5) & 0xf) << 0) | (((056) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ shd_io0_gpio223: shd_io0_gpio223 {
+  pinmux = < (((((0223) >> 5) & 0xf) << 0) | (((0223) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ shd_io1_gpio224: shd_io1_gpio224 {
+  pinmux = < (((((0224) >> 5) & 0xf) << 0) | (((0224) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ shd_io2_gpio227: shd_io2_gpio227 {
+  pinmux = < (((((0227) >> 5) & 0xf) << 0) | (((0227) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ shd_io3_gpio016: shd_io3_gpio016 {
+  pinmux = < (((((016) >> 5) & 0xf) << 0) | (((016) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pvt_cs_n_gpio124: pvt_cs_n_gpio124 {
+  pinmux = < (((((0124) >> 5) & 0xf) << 0) | (((0124) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pvt_clk_gpio125: pvt_clk_gpio125 {
+  pinmux = < (((((0125) >> 5) & 0xf) << 0) | (((0125) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pvt_io0_gpio121: pvt_io0_gpio121 {
+  pinmux = < (((((0121) >> 5) & 0xf) << 0) | (((0121) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pvt_io1_gpio122: pvt_io1_gpio122 {
+  pinmux = < (((((0122) >> 5) & 0xf) << 0) | (((0122) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pvt_io2_gpio123: pvt_io2_gpio123 {
+  pinmux = < (((((0123) >> 5) & 0xf) << 0) | (((0123) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pvt_io3_gpio126: pvt_io3_gpio126 {
+  pinmux = < (((((0126) >> 5) & 0xf) << 0) | (((0126) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+
+
+
+
+ /omit-if-no-ref/ gpspi_cs_n_gpio024: gpspi_cs_n_gpio024 {
+  pinmux = < (((((024) >> 5) & 0xf) << 0) | (((024) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpspi_clk_gpio023: gpspi_clk_gpio023 {
+  pinmux = < (((((023) >> 5) & 0xf) << 0) | (((023) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpspi_clk_alt_gpio057: gpspi_clk_alt_gpio057 {
+  pinmux = < (((((057) >> 5) & 0xf) << 0) | (((057) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpspi_io0_gpio245: gpspi_io0_gpio245 {
+  pinmux = < (((((0245) >> 5) & 0xf) << 0) | (((0245) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpspi_io1_gpio243: gpspi_io1_gpio243 {
+  pinmux = < (((((0243) >> 5) & 0xf) << 0) | (((0243) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpspi_io2_gpio034: gpspi_io2_gpio034 {
+  pinmux = < (((((076) >> 5) & 0xf) << 0) | (((076) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpspi_io3_gpio022: gpspi_io3_gpio022 {
+  pinmux = < (((((022) >> 5) & 0xf) << 0) | (((022) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ int_spi_cs_n_gpio116: int_spi_cs_n_gpio116 {
+  pinmux = < (((((0116) >> 5) & 0xf) << 0) | (((0116) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ int_spi_clk_gpio117: int_spi_clk_gpio117 {
+  pinmux = < (((((0117) >> 5) & 0xf) << 0) | (((0117) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ int_spi_io0_gpio074: int_spi_io0_gpio074 {
+  pinmux = < (((((074) >> 5) & 0xf) << 0) | (((074) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ int_spi_io1_gpio075: int_spi_io1_gpio075 {
+  pinmux = < (((((075) >> 5) & 0xf) << 0) | (((075) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ int_spi_wp_n_gpio076: int_spi_wp_n_gpio076 {
+  pinmux = < (((((076) >> 5) & 0xf) << 0) | (((076) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+
+
+
+
+ /omit-if-no-ref/ pspi_cs_n_gpio116: pspi_cs_n_gpio116 {
+  pinmux = < (((((0116) >> 5) & 0xf) << 0) | (((0116) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pspi_clk_gpio117: pspi_clk_gpio117 {
+  pinmux = < (((((0117) >> 5) & 0xf) << 0) | (((0117) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pspi_mosi_gpio074: pspi_mosi_gpio074 {
+  pinmux = < (((((074) >> 5) & 0xf) << 0) | (((074) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pspi_miso_gpio075: pspi_miso_gpio075 {
+  pinmux = < (((((075) >> 5) & 0xf) << 0) | (((075) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ peci_dat_gpio042: peci_dat_gpio042 {
+  pinmux = < (((((042) >> 5) & 0xf) << 0) | (((042) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vref_vtt_gpio044: vref_vtt_gpio044 {
+  pinmux = < (((((044) >> 5) & 0xf) << 0) | (((044) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ vcc_pwrgd_gpio057: vcc_pwrgd_gpio057 {
+  pinmux = < (((((057) >> 5) & 0xf) << 0) | (((057) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwrok_gpio106: pwrok_gpio106 {
+  pinmux = < (((((0106) >> 5) & 0xf) << 0) | (((0106) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwrgd_s0ix_gpio022: pwrgd_s0ix_gpio022 {
+  pinmux = < (((((022) >> 5) & 0xf) << 0) | (((022) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slp_s0_n_gpio030: slp_s0_n_gpio030 {
+  pinmux = < (((((030) >> 5) & 0xf) << 0) | (((030) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cpu_c10_gpio175: cpu_c10_gpio175 {
+  pinmux = < (((((0175) >> 5) & 0xf) << 0) | (((0175) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ clk_32khz_in_gpio165: clk_32khz_in_gpio165 {
+  pinmux = < (((((0165) >> 5) & 0xf) << 0) | (((0165) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ clk_32khz_out_gpio221: clk_32khz_out_gpio221 {
+  pinmux = < (((((0221) >> 5) & 0xf) << 0) | (((0221) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ tst_clk_out_gpio060: tst_clk_out_gpio060 {
+  pinmux = < (((((060) >> 5) & 0xf) << 0) | (((060) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pci_reset_n_gpio064: pci_reset_n_gpio064 {
+  pinmux = < (((((064) >> 5) & 0xf) << 0) | (((064) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ prochot_in_n_gpio222: prochot_in_n_gpio222 {
+  pinmux = < (((((0222) >> 5) & 0xf) << 0) | (((0222) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ ps2_clk0a_gpio114: ps2_clk0a_gpio114 {
+  pinmux = < (((((0114) >> 5) & 0xf) << 0) | (((0114) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ps2_dat0a_gpio115: ps2_dat0a_gpio115 {
+  pinmux = < (((((0115) >> 5) & 0xf) << 0) | (((0115) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ps2_clk0b_gpio007: ps2_clk0b_gpio007 {
+  pinmux = < (((((07) >> 5) & 0xf) << 0) | (((07) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ps2_dat0b_gpio010: ps2_dat0b_gpio010 {
+  pinmux = < (((((010) >> 5) & 0xf) << 0) | (((010) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ps2_clk1b_gpio154: ps2_clk1b_gpio154 {
+  pinmux = < (((((0154) >> 5) & 0xf) << 0) | (((0154) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ ps2_dat1b_gpio155: ps2_dat1b_gpio155 {
+  pinmux = < (((((0155) >> 5) & 0xf) << 0) | (((0155) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ pwm0_gpio053: pwm0_gpio053 {
+  pinmux = < (((((053) >> 5) & 0xf) << 0) | (((053) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm0_alt_gpio241: pwm0_alt_gpio241 {
+  pinmux = < (((((0241) >> 5) & 0xf) << 0) | (((0241) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm1_gpio054: pwm1_gpio054 {
+  pinmux = < (((((054) >> 5) & 0xf) << 0) | (((054) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm1_alt_gpio254: pwm1_alt_gpio254 {
+  pinmux = < (((((0254) >> 5) & 0xf) << 0) | (((0254) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm2_gpio055: pwm2_gpio055 {
+  pinmux = < (((((055) >> 5) & 0xf) << 0) | (((055) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm2_alt_gpio045: pwm2_alt_gpio045 {
+  pinmux = < (((((045) >> 5) & 0xf) << 0) | (((045) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm3_gpio056: pwm3_gpio056 {
+  pinmux = < (((((056) >> 5) & 0xf) << 0) | (((056) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm3_alt_gpio047: pwm3_alt_gpio047 {
+  pinmux = < (((((047) >> 5) & 0xf) << 0) | (((047) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm4_gpio011: pwm4_gpio011 {
+  pinmux = < (((((011) >> 5) & 0xf) << 0) | (((011) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm5_gpio002: pwm5_gpio002 {
+  pinmux = < (((((02) >> 5) & 0xf) << 0) | (((02) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm6_gpio014: pwm6_gpio014 {
+  pinmux = < (((((014) >> 5) & 0xf) << 0) | (((014) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm6_alt_gpio063: pwm6_alt_gpio063 {
+  pinmux = < (((((063) >> 5) & 0xf) << 0) | (((063) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm7_gpio015: pwm7_gpio015 {
+  pinmux = < (((((015) >> 5) & 0xf) << 0) | (((015) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm7_alt_gpio061: pwm7_alt_gpio061 {
+  pinmux = < (((((061) >> 5) & 0xf) << 0) | (((061) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm8_gpio035: pwm8_gpio035 {
+  pinmux = < (((((035) >> 5) & 0xf) << 0) | (((035) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ pwm8_alt_gpio175: pwm8_alt_gpio175 {
+  pinmux = < (((((0175) >> 5) & 0xf) << 0) | (((0175) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ sb_tsi_dat_gpio042: sb_tsi_dat_gpio042 {
+  pinmux = < (((((042) >> 5) & 0xf) << 0) | (((042) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sb_tsi_clk_gpio043: sb_tsi_clk_gpio043 {
+  pinmux = < (((((043) >> 5) & 0xf) << 0) | (((043) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ slv_spi_cs_n_gpio131: slv_spi_cs_n_gpio131 {
+  pinmux = < (((((0131) >> 5) & 0xf) << 0) | (((0131) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slv_spi_sclk_gpio054: slv_spi_sclk_gpio054 {
+  pinmux = < (((((054) >> 5) & 0xf) << 0) | (((054) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slv_spi_io0_gpio130: slv_spi_io0_gpio130 {
+  pinmux = < (((((0130) >> 5) & 0xf) << 0) | (((0130) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slv_spi_io1_gpio014: slv_spi_io1_gpio014 {
+  pinmux = < (((((014) >> 5) & 0xf) << 0) | (((014) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slv_spi_io2_gpio012: slv_spi_io2_gpio012 {
+  pinmux = < (((((012) >> 5) & 0xf) << 0) | (((012) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slv_spi_io3_gpio013: slv_spi_io3_gpio013 {
+  pinmux = < (((((013) >> 5) & 0xf) << 0) | (((013) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ slv_spi_mstr_int_gpio053: slv_spi_mstr_int_gpio053 {
+  pinmux = < (((((053) >> 5) & 0xf) << 0) | (((053) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ tach0_gpio050: tach0_gpio050 {
+  pinmux = < (((((050) >> 5) & 0xf) << 0) | (((050) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ tach1_gpio051: tach1_gpio051 {
+  pinmux = < (((((051) >> 5) & 0xf) << 0) | (((051) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ tach2_gpio052: tach2_gpio052 {
+  pinmux = < (((((052) >> 5) & 0xf) << 0) | (((052) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ tach3_gpio033: tach3_gpio033 {
+  pinmux = < (((((033) >> 5) & 0xf) << 0) | (((033) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ tfdp_clk_gpio104: tfdp_clk_gpio104 {
+  pinmux = < (((((0104) >> 5) & 0xf) << 0) | (((0104) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ tfdp_dat_gpio105: tfdp_dat_gpio105 {
+  pinmux = < (((((0105) >> 5) & 0xf) << 0) | (((0105) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ uart0_tx_gpio104: uart0_tx_gpio104 {
+  pinmux = < (((((0104) >> 5) & 0xf) << 0) | (((0104) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_rx_gpio105: uart0_rx_gpio105 {
+  pinmux = < (((((0105) >> 5) & 0xf) << 0) | (((0105) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_cts_n_gpio143: uart0_cts_n_gpio143 {
+  pinmux = < (((((0143) >> 5) & 0xf) << 0) | (((0143) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_dcd_n_gpio017: uart0_dcd_n_gpio017 {
+  pinmux = < (((((017) >> 5) & 0xf) << 0) | (((017) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_dsr_n_gpio027: uart0_dsr_n_gpio027 {
+  pinmux = < (((((027) >> 5) & 0xf) << 0) | (((027) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_dtr_n_gpio026: uart0_dtr_n_gpio026 {
+  pinmux = < (((((026) >> 5) & 0xf) << 0) | (((026) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_ri_n_gpio032: uart0_ri_n_gpio032 {
+  pinmux = < (((((032) >> 5) & 0xf) << 0) | (((032) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart0_rts_n_gpio144: uart0_rts_n_gpio144 {
+  pinmux = < (((((0144) >> 5) & 0xf) << 0) | (((0144) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart_clk_gpio025: uart_clk_gpio025 {
+  pinmux = < (((((025) >> 5) & 0xf) << 0) | (((025) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart_clk_alt_gpio244: uart_clk_alt_gpio244 {
+  pinmux = < (((((0244) >> 5) & 0xf) << 0) | (((0244) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ uart1_tx_gpio170: uart1_tx_gpio170 {
+  pinmux = < (((((0170) >> 5) & 0xf) << 0) | (((0170) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_rx_gpio171: uart1_rx_gpio171 {
+  pinmux = < (((((0171) >> 5) & 0xf) << 0) | (((0171) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_rx_alt_gpio255: uart1_rx_alt_gpio255 {
+  pinmux = < (((((0255) >> 5) & 0xf) << 0) | (((0255) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_cts_n_gpio040: uart1_cts_n_gpio040 {
+  pinmux = < (((((040) >> 5) & 0xf) << 0) | (((040) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_dcd_n_gpio060: uart1_dcd_n_gpio060 {
+  pinmux = < (((((060) >> 5) & 0xf) << 0) | (((060) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_dsr_n_gpio255: uart1_dsr_n_gpio255 {
+  pinmux = < (((((0255) >> 5) & 0xf) << 0) | (((0255) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_dtr_n_gpio120: uart1_dtr_n_gpio120 {
+  pinmux = < (((((0120) >> 5) & 0xf) << 0) | (((0120) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_ri_n_gpio025: uart1_ri_n_gpio025 {
+  pinmux = < (((((025) >> 5) & 0xf) << 0) | (((025) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart1_rts_n_gpio127: uart1_rts_n_gpio127 {
+  pinmux = < (((((0127) >> 5) & 0xf) << 0) | (((0127) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ uart2_tx_gpio146: uart2_tx_gpio146 {
+  pinmux = < (((((0146) >> 5) & 0xf) << 0) | (((0146) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_rx_gpio145: uart2_rx_gpio145 {
+  pinmux = < (((((0145) >> 5) & 0xf) << 0) | (((0145) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_cts_n_gpio142: uart2_cts_n_gpio142 {
+  pinmux = < (((((0142) >> 5) & 0xf) << 0) | (((0142) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_dcd_n_gpio004: uart2_dcd_n_gpio004 {
+  pinmux = < (((((004) >> 5) & 0xf) << 0) | (((004) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_dsr_n_gpio147: uart2_dsr_n_gpio147 {
+  pinmux = < (((((0147) >> 5) & 0xf) << 0) | (((0147) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_dtr_n_gpio150: uart2_dtr_n_gpio150 {
+  pinmux = < (((((0150) >> 5) & 0xf) << 0) | (((0150) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_ri_n_gpio003: uart2_ri_n_gpio003 {
+  pinmux = < (((((003) >> 5) & 0xf) << 0) | (((003) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ uart2_rts_n_gpio141: uart2_rts_n_gpio141 {
+  pinmux = < (((((0150) >> 5) & 0xf) << 0) | (((0150) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ vci_ovrd_in_gpio172: vci_ovrd_in_gpio172 {
+  pinmux = < (((((0172) >> 5) & 0xf) << 0) | (((0172) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio172_gpio172: gpio172_gpio172 {
+  pinmux = < (((((0172) >> 5) & 0xf) << 0) | (((0172) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vci_in0_n_gpio253: vci_in0_n_gpio253 {
+  pinmux = < (((((0253) >> 5) & 0xf) << 0) | (((0253) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio253_gpio253: gpio253_gpio253 {
+  pinmux = < (((((0253) >> 5) & 0xf) << 0) | (((0253) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vci_in1_n_gpio162: vci_in1_n_gpio162 {
+  pinmux = < (((((0162) >> 5) & 0xf) << 0) | (((0162) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio162_gpio162: gpio162_gpio162 {
+  pinmux = < (((((0162) >> 5) & 0xf) << 0) | (((0162) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vci_in2_n_gpio161: vci_in2_n_gpio161 {
+  pinmux = < (((((0161) >> 5) & 0xf) << 0) | (((0161) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio161_gpio161: gpio161_gpio161 {
+  pinmux = < (((((0161) >> 5) & 0xf) << 0) | (((0161) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vci_in3_n_gpio000: vci_in3_n_gpio000 {
+  pinmux = < (((((000) >> 5) & 0xf) << 0) | (((000) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio000_gpio000: gpio000_gpio000 {
+  pinmux = < (((((0000) >> 5) & 0xf) << 0) | (((0000) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ vci_out_gpio250: vci_out_gpio250 {
+  pinmux = < (((((0250) >> 5) & 0xf) << 0) | (((0250) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio250_gpio250: gpio250_gpio250 {
+  pinmux = < (((((0250) >> 5) & 0xf) << 0) | (((0250) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sys_shdn_n_gpio221: sys_shdn_n_gpio221 {
+  pinmux = < (((((0221) >> 5) & 0xf) << 0) | (((0221) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ bgpo0_gpio253: bgpo0_gpio253 {
+  pinmux = < (((((0253) >> 5) & 0xf) << 0) | (((0253) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ bgpo1_gpio101: bgpo1_gpio101 {
+  pinmux = < (((((0101) >> 5) & 0xf) << 0) | (((0101) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ bgpo2_gpio102: bgpo2_gpio102 {
+  pinmux = < (((((0102) >> 5) & 0xf) << 0) | (((0102) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ cmp_vin0_gpio242: cmp_vin0_gpio242 {
+  pinmux = < (((((0242) >> 5) & 0xf) << 0) | (((0242) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cmp_vout0_gpio241: cmp_vout0_gpio241 {
+  pinmux = < (((((0241) >> 5) & 0xf) << 0) | (((0241) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cmp_vref0_gpio246: cmp_vref0_gpio246 {
+  pinmux = < (((((0226) >> 5) & 0xf) << 0) | (((0226) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cmp_vin1_gpio244: cmp_vin1_gpio244 {
+  pinmux = < (((((0244) >> 5) & 0xf) << 0) | (((0244) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cmp_vout1_gpio175: cmp_vout1_gpio175 {
+  pinmux = < (((((0175) >> 5) & 0xf) << 0) | (((0175) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cmp_vref1_gpio254: cmp_vref1_gpio254 {
+  pinmux = < (((((0106) >> 5) & 0xf) << 0) | (((0106) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ cec_out_gpio170: cec_out_gpio170 {
+  pinmux = < (((((0170) >> 5) & 0xf) << 0) | (((0170) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ cec_in_gpio171: cec_in_gpio171 {
+  pinmux = < (((((0171) >> 5) & 0xf) << 0) | (((0171) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+
+ /omit-if-no-ref/ sgpio0_clock_gpio024: sgpio0_clock_gpio024 {
+  pinmux = < (((((024) >> 5) & 0xf) << 0) | (((024) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio0_datain_gpio031: sgpio0_datain_gpio031 {
+  pinmux = < (((((031) >> 5) & 0xf) << 0) | (((031) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio0_dataout_gpio106: sgpio0_dataout_gpio106 {
+  pinmux = < (((((0106) >> 5) & 0xf) << 0) | (((0106) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio0_load_gpio152: sgpio0_load_gpio152 {
+  pinmux = < (((((0152) >> 5) & 0xf) << 0) | (((0152) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio1_clock_gpio161: sgpio1_clock_gpio161 {
+  pinmux = < (((((0161) >> 5) & 0xf) << 0) | (((0161) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio1_datain_gpio064: sgpio1_datain_gpio064 {
+  pinmux = < (((((064) >> 5) & 0xf) << 0) | (((064) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio1_dataout_gpio156: sgpio1_dataout_gpio156 {
+  pinmux = < (((((0156) >> 5) & 0xf) << 0) | (((0156) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio1_load_gpio246: sgpio1_load_gpio246 {
+  pinmux = < (((((0246) >> 5) & 0xf) << 0) | (((0246) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio2_clock_gpio162: sgpio2_clock_gpio162 {
+  pinmux = < (((((0162) >> 5) & 0xf) << 0) | (((0162) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio2_datain_gpio021: sgpio2_datain_gpio021 {
+  pinmux = < (((((021) >> 5) & 0xf) << 0) | (((021) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio2_dataout_gpio020: sgpio2_dataout_gpio020 {
+  pinmux = < (((((020) >> 5) & 0xf) << 0) | (((020) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio2_load_gpio033: sgpio2_load_gpio033 {
+  pinmux = < (((((033) >> 5) & 0xf) << 0) | (((033) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio3_clock_gpio163: sgpio3_clock_gpio163 {
+  pinmux = < (((((0163) >> 5) & 0xf) << 0) | (((0163) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ gpio163_gpio163: gpio163_gpio163 {
+  pinmux = < (((((0163) >> 5) & 0xf) << 0) | (((0163) & 0x1f) << 4) | (((0x0) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio3_datain_gpio242: sgpio3_datain_gpio242 {
+  pinmux = < (((((0242) >> 5) & 0xf) << 0) | (((0242) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio3_dataout_gpio241: sgpio3_dataout_gpio241 {
+  pinmux = < (((((0241) >> 5) & 0xf) << 0) | (((0241) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+
+ /omit-if-no-ref/ sgpio3_load_gpio254: sgpio3_load_gpio254 {
+  pinmux = < (((((0254) >> 5) & 0xf) << 0) | (((0254) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+ };
+};
+
+
+&pinctrl {
+ peci_dat_gpio042_sleep: peci_dat_gpio042_sleep {
+  pinmux = < (((((042) >> 5) & 0xf) << 0) | (((042) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+ vref_vtt_gpio044_sleep: vref_vtt_gpio044_sleep {
+  pinmux = < (((((044) >> 5) & 0xf) << 0) | (((044) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+
+ ps2_clk0b_gpio007_sleep: ps2_clk0b_gpio007_sleep {
+  pinmux = < (((((007) >> 5) & 0xf) << 0) | (((007) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+ ps2_dat0b_gpio010_sleep: ps2_dat0b_gpio010_sleep {
+  pinmux = < (((((010) >> 5) & 0xf) << 0) | (((010) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+ ps2_clk1b_gpio154_sleep: ps2_clk1b_gpio154_sleep {
+  pinmux = < (((((0154) >> 5) & 0xf) << 0) | (((0154) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+ ps2_dat1b_gpio155_sleep: ps2_dat1b_gpio155_sleep {
+  pinmux = < (((((0155) >> 5) & 0xf) << 0) | (((0155) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+
+ pwm0_gpio053_sleep: pwm0_gpio053_sleep {
+  pinmux = < (((((053) >> 5) & 0xf) << 0) | (((053) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm0_alt_gpio241_sleep: pwm0_alt_gpio241_sleep {
+  pinmux = < (((((0241) >> 5) & 0xf) << 0) | (((0241) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm1_gpio054_sleep: pwm1_gpio054_sleep {
+  pinmux = < (((((054) >> 5) & 0xf) << 0) | (((054) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm1_alt_gpio254_sleep: pwm1_alt_gpio254_sleep {
+  pinmux = < (((((0254) >> 5) & 0xf) << 0) | (((0254) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm2_gpio055_sleep: pwm2_gpio055_sleep {
+  pinmux = < (((((055) >> 5) & 0xf) << 0) | (((055) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm2_alt_gpio045_sleep: pwm2_alt_gpio045_sleep {
+  pinmux = < (((((045) >> 5) & 0xf) << 0) | (((045) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+ pwm3_gpio056_sleep: pwm3_gpio056_sleep {
+  pinmux = < (((((056) >> 5) & 0xf) << 0) | (((056) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm3_alt_gpio047_sleep: pwm3_alt_gpio047_sleep {
+  pinmux = < (((((047) >> 5) & 0xf) << 0) | (((047) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm4_gpio011_sleep: pwm4_gpio011_sleep {
+  pinmux = < (((((011) >> 5) & 0xf) << 0) | (((011) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm5_gpio002_sleep: pwm5_gpio002_sleep {
+  pinmux = < (((((02) >> 5) & 0xf) << 0) | (((02) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm6_gpio014_sleep: pwm6_gpio014_sleep {
+  pinmux = < (((((014) >> 5) & 0xf) << 0) | (((014) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm6_alt_gpio063_sleep: pwm6_alt_gpio063_sleep {
+  pinmux = < (((((063) >> 5) & 0xf) << 0) | (((063) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm7_gpio015_sleep: pwm7_gpio015_sleep {
+  pinmux = < (((((015) >> 5) & 0xf) << 0) | (((015) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm7_alt_gpio061_sleep: pwm7_alt_gpio061_sleep {
+  pinmux = < (((((061) >> 5) & 0xf) << 0) | (((061) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm8_gpio035_sleep: pwm8_gpio035_sleep {
+  pinmux = < (((((035) >> 5) & 0xf) << 0) | (((035) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pwm8_alt_gpio175_sleep: pwm8_alt_gpio175_sleep {
+  pinmux = < (((((0175) >> 5) & 0xf) << 0) | (((0175) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+
+ ksi0_gpio017_sleep: ksi0_gpio017_sleep {
+  pinmux = < (((((017) >> 5) & 0xf) << 0) | (((017) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi1_gpio020_sleep: ksi1_gpio020_sleep {
+  pinmux = < (((((020) >> 5) & 0xf) << 0) | (((020) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi2_gpio021_sleep: ksi2_gpio021_sleep {
+  pinmux = < (((((021) >> 5) & 0xf) << 0) | (((021) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi3_gpio026_sleep: ksi3_gpio026_sleep {
+  pinmux = < (((((026) >> 5) & 0xf) << 0) | (((026) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi4_gpio027_sleep: ksi4_gpio027_sleep {
+  pinmux = < (((((027) >> 5) & 0xf) << 0) | (((027) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi5_gpio030_sleep: ksi5_gpio030_sleep {
+  pinmux = < (((((030) >> 5) & 0xf) << 0) | (((030) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi6_gpio031_sleep: ksi6_gpio031_sleep {
+  pinmux = < (((((031) >> 5) & 0xf) << 0) | (((031) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ ksi7_gpio032_sleep: ksi7_gpio032_sleep {
+  pinmux = < (((((032) >> 5) & 0xf) << 0) | (((032) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso00_gpio040_sleep: kso00_gpio040_sleep {
+  pinmux = < (((((040) >> 5) & 0xf) << 0) | (((040) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso01_gpio045_sleep: kso01_gpio045_sleep {
+  pinmux = < (((((045) >> 5) & 0xf) << 0) | (((045) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso02_gpio046_sleep: kso02_gpio046_sleep {
+  pinmux = < (((((046) >> 5) & 0xf) << 0) | (((046) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso03_gpio047_sleep: kso03_gpio047_sleep {
+  pinmux = < (((((047) >> 5) & 0xf) << 0) | (((047) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso04_gpio107_sleep: kso04_gpio107_sleep {
+  pinmux = < (((((0107) >> 5) & 0xf) << 0) | (((0107) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso05_gpio112_sleep: kso05_gpio112_sleep {
+  pinmux = < (((((0112) >> 5) & 0xf) << 0) | (((0112) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso06_gpio113_sleep: kso06_gpio113_sleep {
+  pinmux = < (((((0113) >> 5) & 0xf) << 0) | (((0113) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso07_gpio120_sleep: kso07_gpio120_sleep {
+  pinmux = < (((((0120) >> 5) & 0xf) << 0) | (((0120) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso08_gpio121_sleep: kso08_gpio121_sleep {
+  pinmux = < (((((0121) >> 5) & 0xf) << 0) | (((0121) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso09_gpio122_sleep: kso09_gpio122_sleep {
+  pinmux = < (((((0122) >> 5) & 0xf) << 0) | (((0122) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso10_gpio123_sleep: kso10_gpio123_sleep {
+  pinmux = < (((((0123) >> 5) & 0xf) << 0) | (((0123) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso11_gpio124_sleep: kso11_gpio124_sleep {
+  pinmux = < (((((0124) >> 5) & 0xf) << 0) | (((0124) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso12_gpio125_sleep: kso12_gpio125_sleep {
+  pinmux = < (((((0125) >> 5) & 0xf) << 0) | (((0125) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso13_gpio126_sleep: kso13_gpio126_sleep {
+  pinmux = < (((((0126) >> 5) & 0xf) << 0) | (((0126) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso14_gpio152_sleep: kso14_gpio152_sleep {
+  pinmux = < (((((0152) >> 5) & 0xf) << 0) | (((0152) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso15_gpio151_sleep: kso15_gpio151_sleep {
+  pinmux = < (((((0151) >> 5) & 0xf) << 0) | (((0151) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso16_gpio132_sleep: kso16_gpio132_sleep {
+  pinmux = < (((((0132) >> 5) & 0xf) << 0) | (((0132) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ kso17_gpio140_sleep: kso17_gpio140_sleep {
+  pinmux = < (((((0140) >> 5) & 0xf) << 0) | (((0140) & 0x1f) << 4) | (((0x3) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+
+ pspi_cs_n_gpio116_sleep: pspi_cs_n_gpio116_sleep {
+  pinmux = < (((((0116) >> 5) & 0xf) << 0) | (((0116) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pspi_clk_gpio117_sleep: pspi_clk_gpio117_sleep {
+  pinmux = < (((((0117) >> 5) & 0xf) << 0) | (((0117) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pspi_mosi_gpio074_sleep: pspi_mosi_gpio074_sleep {
+  pinmux = < (((((074) >> 5) & 0xf) << 0) | (((074) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ pspi_miso_gpio075_sleep: pspi_miso_gpio075_sleep {
+  pinmux = < (((((075) >> 5) & 0xf) << 0) | (((075) & 0x1f) << 4) | (((0x2) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+
+ led0_gpio156_sleep: led0_gpio156_sleep {
+  pinmux = < (((((0156) >> 5) & 0xf) << 0) | (((0156) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ led1_gpio157_sleep: led1_gpio157_sleep {
+  pinmux = < (((((0157) >> 5) & 0xf) << 0) | (((0157) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+
+ led2_gpio153_sleep: led2_gpio153_sleep {
+  pinmux = < (((((0153) >> 5) & 0xf) << 0) | (((0153) & 0x1f) << 4) | (((0x1) & 0x7) << 9)) >;
+  low-power-enable;
+ };
+};
+# 11 "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853/mec15xxevb_assy6853-pinctrl.dtsi" 2
+
+&ps2_clk0b_gpio007 {
+ drive-open-drain;
+};
+
+&ps2_dat0b_gpio010 {
+ drive-open-drain;
+};
+
+&ps2_clk1b_gpio154 {
+ drive-open-drain;
+};
+
+&ps2_dat1b_gpio155 {
+ drive-open-drain;
+};
+
+&kso00_gpio040 {
+ bias-pull-up;
+};
+
+&kso01_gpio045 {
+ bias-pull-up;
+};
+
+&kso02_gpio046 {
+ bias-pull-up;
+};
+
+&kso12_gpio125 {
+ bias-pull-up;
+};
+
+&kso13_gpio126 {
+ bias-pull-up;
+};
+
+&kso03_gpio047 {
+ bias-pull-up;
+};
+
+&kso04_gpio107 {
+ bias-pull-up;
+};
+
+&kso05_gpio112 {
+ bias-pull-up;
+};
+
+&kso06_gpio113 {
+ bias-pull-up;
+};
+
+&kso14_gpio152 {
+ bias-pull-up;
+};
+
+&kso15_gpio151 {
+ bias-pull-up;
+};
+
+&kso07_gpio120 {
+ bias-pull-up;
+};
+
+&kso08_gpio121 {
+ bias-pull-up;
+};
+
+&kso09_gpio122 {
+ bias-pull-up;
+};
+
+&kso10_gpio123 {
+ bias-pull-up;
+};
+
+&kso11_gpio124 {
+ bias-pull-up;
+};
+
+&ksi0_gpio017 {
+ bias-pull-up;
+};
+
+&ksi1_gpio020 {
+ bias-pull-up;
+};
+
+&ksi2_gpio021 {
+ bias-pull-up;
+};
+
+&ksi3_gpio026 {
+ bias-pull-up;
+};
+
+&ksi4_gpio027 {
+ bias-pull-up;
+};
+
+&ksi5_gpio030 {
+ bias-pull-up;
+};
+
+&ksi6_gpio031 {
+ bias-pull-up;
+};
+
+&ksi7_gpio032 {
+ bias-pull-up;
+};
+# 10 "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853/mec15xxevb_assy6853.dts" 2
+
+/ {
+ model = "Microchip MEC15XXEVB_ASSY6853 evaluation board";
+ compatible = "microchip,mec15xxevb_assy6853", "microchip,mec1501hsz";
+
+ chosen {
+  zephyr,sram = &sram0;
+  zephyr,console = &uart2;
+  zephyr,flash = &flash0;
+  zephyr,keyboard-scan = &kscan_input;
+ };
+
+ aliases {
+  led0 = &led2;
+  led1 = &led3;
+  led2 = &led4;
+  pwm-0 = &pwm0;
+  peci-0 = &peci0;
+  i2c0 = &i2c_smb_0;
+  i2c-0 = &i2c_smb_0;
+  i2c1 = &i2c_smb_1;
+  i2c7 = &i2c_smb_2;
+  kscan0 = &kscan_input;
+  watchdog0 = &wdog;
+ };
+
+ leds {
+  compatible = "gpio-leds";
+  led2: led_0 {
+
+
+
+   gpios = <&gpio_140_176 14 (1 << 0)>;
+   label = "LED 2";
+  };
+  led3: led_1 {
+
+
+
+   gpios = <&gpio_140_176 15 (1 << 0)>;
+   label = "LED 3";
+  };
+  led4: led_2 {
+
+
+
+   gpios = <&gpio_140_176 11 (1 << 0)>;
+   label = "LED 4";
+  };
+ };
+};
+
+&pcr {
+ status = "okay";
+};
+
+&uart2 {
+ status = "okay";
+ current-speed = <115200>;
+ pinctrl-0 = <&uart2_tx_gpio146 &uart2_rx_gpio145>;
+ pinctrl-names = "default";
+};
+
+&adc0 {
+ status = "okay";
+ pinctrl-0 = <&adc04_gpio204 &adc05_gpio205
+       &adc06_gpio206 &adc07_gpio207
+       &vref2_adc_gpio067 >;
+ pinctrl-names = "default";
+};
+
+&i2c_smb_0 {
+ status = "okay";
+ port_sel = <0>;
+ sda-gpios = <&gpio_000_036 3 0>;
+ scl-gpios = <&gpio_000_036 4 0>;
+ pinctrl-0 = < &i2c00_scl_gpio004 &i2c00_sda_gpio003 >;
+ pinctrl-names = "default";
+};
+
+&i2c_smb_1 {
+ status = "okay";
+ port_sel = <1>;
+ sda-gpios = <&gpio_100_136 24 0>;
+ scl-gpios = <&gpio_100_136 25 0>;
+ pinctrl-0 = < &i2c01_scl_gpio131 &i2c01_sda_gpio130 >;
+ pinctrl-names = "default";
+
+ pca9555@26 {
+  compatible = "nxp,pca95xx";
+# 108 "/home/jayesh/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853/mec15xxevb_assy6853.dts"
+  reg = <0x26>;
+
+  gpio-controller;
+  #gpio-cells = <2>;
+ };
+};
+
+&i2c_smb_2 {
+ status = "okay";
+ port_sel = <7>;
+ sda-gpios = <&gpio_000_036 10 0>;
+ scl-gpios = <&gpio_000_036 11 0>;
+ pinctrl-0 = < &i2c07_scl_gpio013 &i2c07_sda_gpio012 >;
+ pinctrl-names = "default";
+};
+
+&espi0 {
+ status = "okay";
+ io_girq = <19>;
+ vw_girqs = <24 25>;
+ pc_girq = <15>;
+ pinctrl-0 = < &espi_reset_n_gpio061 &espi_cs_n_gpio066
+    &espi_alert_n_gpio063 &espi_clk_gpio065
+    &espi_io0_gpio070 &espi_io1_gpio071
+    &espi_io2_gpio072 &espi_io3_gpio073 >;
+ pinctrl-names = "default";
+};
+
+&timer5 {
+ status = "okay";
+};
+
+&ps2_0 {
+ status = "okay";
+ pinctrl-0 = <&ps2_clk0b_gpio007 &ps2_dat0b_gpio010>;
+ pinctrl-1 = <&ps2_clk0b_gpio007_sleep &ps2_dat0b_gpio010_sleep>;
+ pinctrl-names = "default", "sleep";
+};
+
+&ps2_1 {
+ status = "okay";
+ pinctrl-0 = <&ps2_clk1b_gpio154 &ps2_dat1b_gpio155>;
+ pinctrl-1 = <&ps2_clk1b_gpio154_sleep &ps2_dat1b_gpio155_sleep>;
+ pinctrl-names = "default", "sleep";
+};
+
+&pwm0 {
+ status = "okay";
+ pinctrl-0 = <&pwm0_gpio053>;
+ pinctrl-names = "default";
+};
+
+&kbd0 {
+ status = "okay";
+
+ pinctrl-0 = < &kso00_gpio040 &kso01_gpio045 &kso02_gpio046 &kso12_gpio125
+        &kso13_gpio126 &kso03_gpio047 &kso04_gpio107 &kso05_gpio112
+        &kso06_gpio113 &kso14_gpio152 &kso15_gpio151 &kso07_gpio120
+        &kso08_gpio121 &kso09_gpio122 &kso10_gpio123 &kso11_gpio124
+        &ksi0_gpio017 &ksi1_gpio020 &ksi2_gpio021 &ksi3_gpio026
+        &ksi4_gpio027 &ksi5_gpio030 &ksi6_gpio031 &ksi7_gpio032 >;
+ pinctrl-1 = < &kso00_gpio040_sleep &kso01_gpio045_sleep &kso02_gpio046_sleep
+        &kso12_gpio125_sleep &kso13_gpio126_sleep &kso03_gpio047_sleep
+        &kso04_gpio107_sleep &kso05_gpio112_sleep &kso06_gpio113_sleep
+        &kso14_gpio152_sleep &kso15_gpio151_sleep &kso07_gpio120_sleep
+        &kso08_gpio121_sleep &kso09_gpio122_sleep &kso10_gpio123_sleep
+        &kso11_gpio124_sleep &ksi0_gpio017_sleep &ksi1_gpio020_sleep
+        &ksi2_gpio021_sleep &ksi3_gpio026_sleep &ksi4_gpio027_sleep
+        &ksi5_gpio030_sleep &ksi6_gpio031_sleep &ksi7_gpio032_sleep >;
+ pinctrl-names = "default", "sleep";
+ row-size = <8>;
+ col-size = <16>;
+
+ kscan_input: kscan-input {
+  compatible = "zephyr,kscan-input";
+ };
+};
+
+&peci0 {
+ status = "okay";
+ pinctrl-0 = <&peci_dat_gpio042 &vref_vtt_gpio044>;
+ pinctrl-1 = <&peci_dat_gpio042_sleep &vref_vtt_gpio044_sleep>;
+ pinctrl-names = "default", "sleep";
+};
+
+&spi0 {
+ status = "okay";
+ port_sel = <0>;
+ chip_select = <0>;
+ lines = <1>;
+ pinctrl-0 = < &shd_cs0_n_gpio055
+        &shd_clk_gpio056
+        &shd_io0_gpio223
+        &shd_io1_gpio224 >;
+ pinctrl-names = "default";
+};
+
+&tach0 {
+ status = "okay";
+ pinctrl-0 = <&ict0_tach0_gpio050>;
+ pinctrl-names = "default";
+};
+# 0 "<command-line>" 2
+# 1 "/home/jayesh/zephyrproject/zephyr/misc/empty_file.c"
