@@ -1,0 +1,24 @@
+# Available runners configured by board.cmake.
+runners:
+- dediprog
+
+# Default flash runner if --runner is not given.
+flash-runner: dediprog
+
+# Common runner configuration values.
+config:
+  board_dir: /home/leena/zephyrproject/zephyr/boards/microchip/mec15xxevb_assy6853
+  # Build outputs:
+  elf_file: zephyr.elf
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /home/leena/zephyr-sdk-0.16.8/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /home/leena/zephyr-sdk-0.16.8/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+  openocd_search:
+    - /home/leena/zephyr-sdk-0.16.8/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  dediprog:
+    - --spi-image=/home/leena/zephyrproject/zephyr/samples/basic/blinky_pwm/build/zephyr/spi_image.bin
+    - --vcc=0

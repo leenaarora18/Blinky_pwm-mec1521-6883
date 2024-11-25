@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "pwm.h": "c",
+        "printk.h": "c"
+    }
+}
