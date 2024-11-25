@@ -1,0 +1,63 @@
+// To get started, press Ctrl+Space to bring up the completion menu and view the available nodes.
+
+// You can also use the buttons in the sidebar to perform actions on nodes.
+// Actions currently available include:
+
+// * Enabling / disabling the node
+// * Adding the bus to a bus
+// * Removing the node
+// * Connecting ADC channels
+
+// For more help, browse the DeviceTree documentation at https://docs.zephyrproject.org/latest/guides/dts/index.html
+// You can also visit the nRF DeviceTree extension documentation at https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/guides/ncs_configure_app.html#devicetree-support-in-the-extension
+// &pwm0 {
+//    status = "okay";
+// led0_pwm: pwm_led0 
+//  pwm_led0
+
+//  {
+// label = "PWM_LED0";
+// PWM_DT_SPEC_GET(DT_ALIAS(pwm_led0))
+// pwms = <&pwm0 0 500>;
+//   };
+// };
+
+
+//  
+
+// };
+{
+aliases {
+    pwm_led0 =&pwm0;
+};
+&pwm0{
+     status="okay";
+};
+
+pwm_led0{
+  compatible = "pwm-leds";
+    PWM_LED0: LED0
+    
+    {
+      pwms = <&pwm0 0 50000>;
+      label = "PWM _LED0";
+
+    };
+    PWM_LED1: LED1
+    {
+      pwms = <&pwm0 1 50000>;
+      label = "PWM _LED1";
+
+    };
+  };
+
+};
+// pwm0: pwm@40005800 {
+//   compatible = "microchip,xec-pwm";
+//   reg = < 0x40005800 0x20 >;
+//   pcrs = < 0x1 0x4 >;
+//   status = "okay";
+//   #pwm-cells = < 0x3 >;
+//   pinctrl-0 = < &pwm0_gpio053 >;
+//   pinctrl-names = "default";
+// };

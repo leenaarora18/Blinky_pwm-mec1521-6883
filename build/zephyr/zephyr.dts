@@ -1,6 +1,6 @@
-/dts-v1/;
+///dts-v1/;
 
-/ {
+ {
 	#address-cells = < 0x1 >;
 	#size-cells = < 0x1 >;
 	model = "Microchip MEC15XXEVB_ASSY6853 evaluation board";
